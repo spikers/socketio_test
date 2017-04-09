@@ -4,8 +4,6 @@
 module.exports = function (io) {
   //When it connects, everything begins
   io.on('connection', (socket) => {
-    socket = leaveAllRooms(Object.keys(io.sockets.adapter.sids[socket.id]), socket);
-
     //Join the 'default' room
     socket.join('default');
 
