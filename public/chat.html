@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wynk Chatting</title>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script src="./js/socket.io.js"></script>
+  <script src="./js/chat.js"></script>
+  <style>
+  /*No idea why I couldn't import this as seen above. It grabs the page, but the styles didn't apply. */
+    body { font-size: 0; }
+    body > * { font-size: 1rem; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font: 13px Helvetica, Arial; }
+    form { padding: 3px; width: 100%; width: 100%; }
+    form input { height: 3em; width: 78%; }
+    form button { height: 3em; width: 20%; background: rgb(130, 224, 255); border: none; }
+    #messages { list-style-type: none; margin: 0; padding: 0; height: 300px; overflow-y: scroll; }
+    #messages li { padding: 5px 10px; }
+    #messages li:nth-child(odd) { background: #eee; }
+
+    #text-container { width: 100% }
+    #typing { height: 1em; }
+
+    .chat-window { height: 100%; }
+  </style>
+
+</head>
+<body>
+  <h1>Wynk Chat</h1>
+  <div id="room-container"></div>
+  <br />
+  <div class="chat-window">
+    <ul id="messages"></ul>
+
+    <div id="text-container">
+      <p id='typing'></p>
+      <form id="form" action="">
+        <input id="input"><button>Send</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
